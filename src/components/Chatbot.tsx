@@ -16,24 +16,40 @@ const Chatbot: React.FC = ()=>{
         setMessages(newMessages);
         setInput('');
 
-        //mock
+        //mock(just for test)
         setTimeout(()=>{
             setMessages([...newMessages,{
                 text:'I am dealing with your request ...',
                 sender:'bot'
             }])
         },1000);
-
-        
-
     }
 
     return(
         <div className="chatbot-container">
             <div className="chatbot-messages">
-                {
-
+                {messages.length === 0 ? (
+                    <div className="empty-state">
+                        <p>talk to AI Agent and design your trip ~</p>
+                    </div>
+                ):(
+                    messages.map((msg,index)=>(
+                        <div key={index} className={`message ${msg.sender}`}>
+                            {msg.text}
+                        </div>
+                    ))
+                )
                 }
+            </div>
+
+            <div className="chatbot-input">
+                <input 
+                    type="text"
+                    value={input}
+                    onChange={(e)=> setInput(e.target.value)}
+                    placeholder='Type your message...'
+                 />
+                 <button onClick={handleSend}>Send</button>
             </div>
         </div>
     )
