@@ -7,3 +7,5 @@ const Profile: React.FC = ()=>{
         </div>
     )
 }
+
+export default Profile;
