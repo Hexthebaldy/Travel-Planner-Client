@@ -1,16 +1,23 @@
 import React from 'react';
+import './UserProfile.css'
 
-const PlanList: React.FC = ()=>{
+interface UserPreferences{
+    preferences: string[];
+    travelStyle: string;
+    budget: string;
+};
+
+interface UserData{
+    name: string;
+    email: string;
+    preferences: UserPreferences;
+};
+
+const UserProfile: React.FC = ()=>{
     return(
-        <div className="plan-list">
-            <h1>My Plans</h1>
-            <ul>
-                <li>Plan 1</li>
-                <li>Plan 2</li>
-                <li>Plan 3</li>
-            </ul>
+        <div className="user-profile">
         </div>
     )
 };
 
-export default PlanList;
+export default UserProfile;
