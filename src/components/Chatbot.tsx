@@ -11,7 +11,7 @@ const Chatbot: React.FC = ()=>{
     const [input,setInput] = useState<string>('');
     const handleSend = ():void =>{
         if(input.trim() === '') return;
-        //pack up user's info
+        //chat history append
         const newMessages = [...messages,{text:input, sender:'user'}] as Message[];
         setMessages(newMessages);
         setInput('');
