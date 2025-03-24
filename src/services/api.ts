@@ -96,3 +96,23 @@ export const deletePlan = async (planId: number): Promise<boolean> => {
     throw error;
   }
 };
+
+// 发送聊天消息到 AI
+export const sendChatMessage = async (message: string): Promise<ChatResponse> => {
+  try {
+    const response = await fetch(`${API_URL}/chat`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message }),
+    });
+    if (!response.ok) {
+      throw new Error('发送消息失败');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('API 错误:', error);
+    throw error;
+  }
+};
