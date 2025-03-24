@@ -1,107 +1,32 @@
 .home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-  min-height: calc(100vh - 80px);
-}
-
-.home-header {
-  text-align: center;
-  margin-bottom: 40px;
-  width: 100%;
-  max-width: 800px;
-}
-
-.home-title {
-  font-size: 2.8rem;
-  color: #2c3e50;
-  margin-bottom: 16px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.home-subtitle {
-  font-size: 1.2rem;
-  color: #5d6d7e;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
-.home-features {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 50px;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.feature-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  color: #3498db;
-  margin-bottom: 15px;
-}
-
-.feature-title {
-  font-size: 1.4rem;
-  color: #2c3e50;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.feature-description {
-  color: #7f8c8d;
-  line-height: 1.5;
-}
-
-.chatbot-section {
-  width: 100%;
-  max-width: 800px;
-  background-color: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-.chatbot-header {
-  background-color: #3498db;
-  color: white;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .home-title {
-    font-size: 2.2rem;
-  }
-  
-  .home-features {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    min-height: calc(100vh - 80px);
   }
   
-  .feature-card {
+  .chatbot-section {
     width: 100%;
-    max-width: 320px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
   }
-}
+  
+  .chatbot-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .chatbot-section {
+      width: 95%;
+    }
+  }
