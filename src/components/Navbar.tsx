@@ -6,9 +6,6 @@ const Navbar: React.FC = ()=>{
     return(
         <nav className="navbar">
             <div className="navbar-container">
-                <Link to="/">
-                    Start Your Journey
-                </Link>
                 <ul className="nav-menu">
                     <li className="nav-item">
                         <Link to="/" className="nav-link">
