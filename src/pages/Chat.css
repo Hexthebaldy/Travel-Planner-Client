@@ -1,0 +1,16 @@
+.home-page {
+    height: 765px;
+    margin: 0 auto;
+  }
+  
+  /* 添加Chatbot组件的样式，消除可能的margin */
+  .home-page > div {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .chatbot-section {
+      width: 95%;
+    }
+  }
