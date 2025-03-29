@@ -1,11 +1,13 @@
 .plan-list {
-  display: grid;
-  height: 800px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
-  padding: 24px;
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 600px;
   margin: 0 auto;
+  height: 750px;
+  overflow-y: auto;
+  max-height: calc(4 * 200px + 3 * 20px); /* 4个卡片高度+3个间距 */
 }
 
 .plan-card {
@@ -17,6 +19,7 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
+  min-height: 150px;
 }
 
 .plan-card::before {
