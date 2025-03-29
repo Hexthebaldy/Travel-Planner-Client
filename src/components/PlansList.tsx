@@ -13,13 +13,13 @@ const PlansList: React.FC = ()=>{
         {
             id: 1,
             title: 'Tokyo Trip',
-            date: '2023-10-15',
+            date: '2025-10-15',
             description: 'Explore the city of lights'
           },
           {
             id: 2,
             title: 'Paris Week',
-            date: '2023-12-20',
+            date: '2025-12-20',
             description: 'Discover the Eiffel Tower'
           }
     ]);

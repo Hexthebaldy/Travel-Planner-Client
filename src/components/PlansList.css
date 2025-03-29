@@ -1,0 +1,152 @@
+.plan-list {
+  display: grid;
+  height: 800px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4a90e2, #67b8e3);
+  opacity: 0.8;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.plan-date {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.plan-date::before {
+  content: '📅';
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.plan-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-btn, .delete-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.detail-btn {
+  background-color: #4a90e2;
+  color: white;
+  flex-grow: 1;
+  margin-right: 12px;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+}
+
+.detail-btn:hover {
+  background-color: #3a7bc8;
+  box-shadow: 0 6px 12px rgba(74, 144, 226, 0.3);
+}
+
+.delete-btn {
+  background-color: #ffffff;
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.delete-btn:hover {
+  background-color: #fff5f5;
+  color: #c0392b;
+  border-color: rgba(231, 76, 60, 0.5);
+}
+
+.empty-plans {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.empty-plans p {
+  margin-bottom: 20px;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.empty-plans button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4a90e2, #67b8e3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.empty-plans button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74, 144, 226, 0.4);
+}
+
+@media (max-width: 768px) {
+  .plan-list {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  
+  .plan-card {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .plan-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
