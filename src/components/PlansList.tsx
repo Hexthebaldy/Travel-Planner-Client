@@ -21,6 +21,30 @@ const PlansList: React.FC = ()=>{
             title: 'Paris Week',
             date: '2025-12-20',
             description: 'Discover the Eiffel Tower'
+          },
+          {
+            id: 3,
+            title: 'Bali Getaway',
+            date: '2026-02-10',
+            description: 'Relax on beautiful beaches'
+          },
+          {
+            id: 4,
+            title: 'New York City',
+            date: '2026-04-05',
+            description: 'Experience the Big Apple'
+          },
+          {
+            id: 5,
+            title: 'Rome Adventure',
+            date: '2026-06-15',
+            description: 'Explore ancient history and cuisine'
+          },
+          {
+            id: 6,
+            title: 'Sydney Exploration',
+            date: '2026-08-22',
+            description: 'Visit the Opera House and beyond'
           }
     ]);
 
