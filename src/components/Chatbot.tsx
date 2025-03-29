@@ -1,10 +1,16 @@
 import React, {useState} from 'react';
 import './Chatbot.css';
+import { sendChatMessage } from '../services/api';
 
 interface Message{
     text:string;
     sender:'user' | 'bot';
 };
+
+interface Response{
+    success: boolean;
+    data: string;
+}
 
 const Chatbot: React.FC = ()=>{
     const [messages,setMessages] = useState<Message[]>([]);
@@ -18,10 +24,17 @@ const Chatbot: React.FC = ()=>{
 
         //mock(just for test)
         setTimeout(()=>{
-            setMessages([...newMessages,{
-                text:'I am dealing with your request ...',
-                sender:'bot'
-            }])
+            sendChatMessage(input).then((response) => {
+                setMessages([...newMessages,{
+                    text: response.data,
+                    sender:'bot'
+                }])
+            })
+            
+            // setMessages([...newMessages,{
+            //     text:'I am dealing with your request ...',
+            //     sender:'bot'
+            // }])
         },1000);
     }
 
