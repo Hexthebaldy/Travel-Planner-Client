@@ -22,20 +22,12 @@ const Chatbot: React.FC = ()=>{
         setMessages(newMessages);
         setInput('');
 
-        //mock(just for test)
-        setTimeout(()=>{
-            sendChatMessage(input).then((response) => {
-                setMessages([...newMessages,{
-                    text: response.data,
-                    sender:'bot'
-                }])
-            })
-            
-            // setMessages([...newMessages,{
-            //     text:'I am dealing with your request ...',
-            //     sender:'bot'
-            // }])
-        },1000);
+        sendChatMessage(input).then((response) => {
+            setMessages([...newMessages,{
+                text: response.data,
+                sender:'bot'
+            }])
+        });
     }
 
     return(

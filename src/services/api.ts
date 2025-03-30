@@ -11,7 +11,7 @@ interface Plan {
 
 interface ChatResponse {
   success: boolean; // 修正拼写错误
-  data: string;
+  data: any;
 }
 
 // 获取旅行计划列表
