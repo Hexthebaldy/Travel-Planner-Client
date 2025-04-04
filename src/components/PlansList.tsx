@@ -39,12 +39,6 @@ const PlansList: React.FC = ()=>{
             title: 'Rome Adventure',
             date: '2026-06-15',
             description: 'Explore ancient history and cuisine'
-          },
-          {
-            id: 6,
-            title: 'Sydney Exploration',
-            date: '2026-08-22',
-            description: 'Visit the Opera House and beyond'
           }
     ]);
 
